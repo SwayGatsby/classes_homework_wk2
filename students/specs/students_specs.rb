@@ -2,7 +2,7 @@ require("minitest/autorun")
 require("minitest/rg")
 require_relative("../students.rb")
 
-class TestCodeClanStudent < MiniTest::TestCodeClanStudent
+class TestCodeClanStudent < MiniTest::Test
   @CodeClanStudent
 
   def setup
@@ -10,6 +10,9 @@ class TestCodeClanStudent < MiniTest::TestCodeClanStudent
     @code_clan_student2 = CodeClanStudent.new("Steven", 14)
   end
 
+def test_student_name
+  assert_equal("Kayla", @code_clan_student.name)
+end
 
 
 

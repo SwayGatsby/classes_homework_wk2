@@ -21,4 +21,20 @@ class TestSportsTeam < MiniTest::Test
     assert_equal("Larry Brown", @sports_team.coach)
   end
 
+  def test_set_team_name
+    @sports_team.set_team_name("Utah Jazz")
+    assert_equal("Utah Jazz", @sports_team.team_name)
+  end
+
+  def test_set_players
+    @sports_team.set_players(["Karl Malone", "John Stockton"])
+    assert_equal(["Karl Malone", "John Stockton"], @sports_team.players)
+  end
+
+  def test_set_coach
+    @sports_team.set_coach("Quin Snyder")
+    assert_equal("Quin Snyder", @sports_team.coach)
+  end
+
+
 end

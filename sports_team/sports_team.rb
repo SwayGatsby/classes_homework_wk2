@@ -20,4 +20,17 @@ class SportsTeam
     return @coach
   end
 
+  def set_team_name(team_name)
+    return @team_name = team_name
+  end
+
+  def set_players(players)
+    return @players = players
+  end
+
+  def set_coach(coach)
+    return @coach = coach
+  end
+
+
 end

@@ -14,6 +14,10 @@ def test_student_name
   assert_equal("Kayla", @code_clan_student.name)
 end
 
+def test_cohort_number
+  assert_equal(14, @code_clan_student2.cohort)
+end
+
 
 
 

@@ -3,7 +3,7 @@ class CodeClanStudent
 #name (string) & cohort (integer)
   def initialize (name, cohort)
     @name = name
-    @cohoort = cohort
+    @cohort = cohort
   end
 
 # name getter

@@ -26,5 +26,10 @@ class TestSportsTeam < MiniTest::Test
     assert_equal("Quin Snyder", @sports_team.coach)
   end
 
+  #Create a method that adds a new player to the player's array.
+  def test_add_player
+    @sports_team.add_player("Scottie Pippen")
+    assert_equal(["Grant Hill", "Isaiah Thomas", "Ben Wallace", "Scottie Pippen"], @sports_team.players)
+  end
 
 end

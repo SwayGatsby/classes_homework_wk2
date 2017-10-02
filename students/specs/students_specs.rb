@@ -10,15 +10,23 @@ class TestCodeClanStudent < MiniTest::Test
     @code_clan_student2 = CodeClanStudent.new("Steven", 14)
   end
 
-def test_student_name
-  assert_equal("Kayla", @code_clan_student.name)
-end
+  def test_student_name
+    assert_equal("Kayla", @code_clan_student.name)
+  end
 
-def test_cohort_number
-  assert_equal(14, @code_clan_student2.cohort)
-end
+  def test_cohort_number
+    assert_equal(14, @code_clan_student2.cohort)
+  end
 
+  def test_set_name
+    @code_clan_student.set_name("Marta")
+    assert_equal("Marta", @code_clan_student.name)
+  end
 
+  def test_set_cohort_number
+    @code_clan_student2.set_cohort(13)
+    assert_equal(13, @code_clan_student2.cohort)
+  end
 
 
 end

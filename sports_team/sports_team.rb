@@ -12,8 +12,13 @@ attr_accessor :coach
     @coach = coach
   end
 
-def add_player(player)
-  return @players.push(player)
-end
+  def add_player(player)
+    return @players.push(player)
+  end
+
+  def check_player(player)
+    return @players.include?(player)
+  end
+
 
 end

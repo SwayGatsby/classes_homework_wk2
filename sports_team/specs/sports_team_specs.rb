@@ -6,7 +6,7 @@ class TestSportsTeam < MiniTest::Test
   @sports_team
 
   def setup
-    @sports_team = SportsTeam.new("Detroit Pistons", ["Grant Hill", "Isaiah Thomas", "Ben Wallace"], "Larry Brown")
+    @sports_team = SportsTeam.new("Detroit Pistons", ["Grant Hill", "Isaiah Thomas", "Ben Wallace"], "Larry Brown", 0)
   end
 
   def test_team_name
@@ -31,5 +31,12 @@ class TestSportsTeam < MiniTest::Test
     @sports_team.add_player("Scottie Pippen")
     assert_equal(["Grant Hill", "Isaiah Thomas", "Ben Wallace", "Scottie Pippen"], @sports_team.players)
   end
+
+  #Add a method that takes in a string of a player's name and checks to see if they are in the players array.
+  def test_check_player
+    result = @sports_team.check_player("Ben Wallace")
+    assert_equal(true, result)
+  end
+
 
 end

@@ -1,12 +1,11 @@
 class LibraryBooks
 
-# attr_reader :team_name, :players
-# attr_accessor :coach, :points
+ def initialize(library_books)
+   @library_books = library_books
+ end
 
-
-  def initialize(library_books)
-    @library_books = library_books
-  end
-
+ def all_library_books
+   return @library_books
+ end
 
 end

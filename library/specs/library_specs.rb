@@ -2,11 +2,11 @@ require("minitest/autorun")
 require("minitest/rg")
 require_relative("../library.rb")
 
-class Library < MiniTest::Test
+class TestLibraryBooks < MiniTest::Test
   @library_books
 
   def setup
-    @library_books = Library.new[
+    @books_array = [
       {
          title: "the_great_gatsby",
          rental_details: {
@@ -20,19 +20,18 @@ class Library < MiniTest::Test
            student_name: "Justina",
            date: "08/08/17"
           }
-        },
-        {
-           title: "the_world_according_to_garp",
-           rental_details: {
-            student_name: "Sarah",
-            date: "03/05/17"
-           }
-         }
+        }
        ]
-
+    @library_books = LibraryBooks.new(@books_array)
   end
 
 #Create a method that list all the books and their corresponding details.
+  def test_all_library_books
+    result = @library_books.all_library_books
+
+    assert_equal(@books_array, result)
+  end
+
 
 
 
